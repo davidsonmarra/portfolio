@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Header } from './components/Header';
+import { GlobalStyle } from './global/styles/globalStyles';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './global/styles/theme';
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
+
   return (
-    <div>
-      <h1>Portfólio</h1>
-    </div>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Header />
+    </ThemeProvider>
   );
 }
 
