@@ -15,10 +15,12 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 87.5%; // 14px
     }
   }
+  
   // REM = 1rem = 16px => sempre usaremos rem para responsividade
   body {
     background: ${({ theme }) => theme.colors.background};
     -webkit-font-smoothing: antialiased;
+    transition: all 0.50s ease-in-out;
   }
   body, input, textarea, button {
     font-family: 'Poppins', sans-serif;

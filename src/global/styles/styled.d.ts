@@ -4,11 +4,12 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       background: string;
-    };
-    fonts: {
-      regular: string;
-      medium: string;
-      bold: string;
+      headerBackground: string;
+      headerText: string;
+      text: string;
+      primary: string;
+      secondary: string;
+      themeIcon: string;
     };
   }
 }
