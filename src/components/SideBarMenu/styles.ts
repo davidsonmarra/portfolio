@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.nav<ContainerProps>`
   position: fixed;
   right: ${({ isSideBarOpen }) => isSideBarOpen ? '0' : '-100%' };
-  transition: 850ms;
+  transition: all 850ms, background-color 350ms;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -19,6 +19,16 @@ export const Container = styled.nav<ContainerProps>`
 
 export const SideBarList = styled.ul`
   list-style: none;
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.headerText};
+  transition: all .3s;
+  opacity: 1;
+  &:hover li {
+    filter: opacity(0.7);
+  }
 `;
 
 export const SideBarItem = styled.li`

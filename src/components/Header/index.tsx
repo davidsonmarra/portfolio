@@ -60,6 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ themeMode, changeTheme }) => {
             <SideBar isSideBarOpen={isSideBarOpen} handleOpenSideBar={handleOpenSideBar} />
             <SideBarMenu 
               isSideBarOpen={isSideBarOpen} 
+              handleOpenSideBar={handleOpenSideBar}
               themeMode={themeMode}
               changeTheme={changeTheme}
             />

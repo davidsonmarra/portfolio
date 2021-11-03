@@ -7,7 +7,7 @@ export const Container = styled.div`
   }
 
   .label {
-    background-color: #111;
+    background-color: ${({ theme }) => theme.colors.background};
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -18,10 +18,11 @@ export const Container = styled.div`
     height: 26px;
     width: 50px;
     transform: scale(1.5);
+    transition: all 0.2s linear;
   }
 
   .label .ball {
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.headerText};
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -29,7 +30,7 @@ export const Container = styled.div`
     height: 22px;
     width: 22px;
     transform: translateX(0px);
-    transition: transform 0.2s linear;
+    transition: all 0.2s linear;
   }
 
   .checkbox:checked + .label .ball {
@@ -49,7 +50,4 @@ export const SvgContainer = styled.div`
   .left {
     transform: translateX(20%);
   }
-  
-
-
 `;
