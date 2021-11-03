@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 
-export const MenuIcon: React.FC = () => {
+export const ContactMeIcon: React.FC = () => {
   const theme = useTheme();
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill={theme.colors.headerText}>
-      <path d="M0 0h24v24H0z" fill="none"/>
-      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      <path d="M0 0h24v24H0V0z" fill="none"/>
+      <path d="M4.01 6.03l7.51 3.22-7.52-1 .01-2.22m7.5 8.72L4 17.97v-2.22l7.51-1M2.01 3L2 10l15 2-15 2 .01 7L23 12 2.01 3z"/>
     </svg>
   );
 }

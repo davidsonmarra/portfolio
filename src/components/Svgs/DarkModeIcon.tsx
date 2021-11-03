@@ -1,11 +1,15 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 
-export const DarkModeIcon: React.FC = () => {
+interface DarkModeIconProps {
+  className?: string;
+}
+
+export const DarkModeIcon: React.FC<DarkModeIconProps> = ({ className }) => {
   const theme = useTheme();
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill={theme.colors.themeIcon}>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill={theme.colors.themeIcon}>
       <g>
         <rect fill="none" height="24" width="24"/>
       </g>

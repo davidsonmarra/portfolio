@@ -1,11 +1,19 @@
 import React from 'react';
-import { MenuIcon } from '../Svgs/MenuIxon';
+import { CloseIcon } from '../Svgs/CloseIcon';
+import { MenuIcon } from '../Svgs/MenuIcon';
 import { Container } from './styles';
 
-export const SideBar: React.FC = () => {
+interface SideBarProps {
+  isSideBarOpen: boolean;
+  handleOpenSideBar: (state: boolean) => void;
+}
+
+export const SideBar: React.FC<SideBarProps> = ({ isSideBarOpen, handleOpenSideBar }) => {
+
+
   return (
-    <Container>
-      <MenuIcon />
+    <Container onClick={() => handleOpenSideBar(isSideBarOpen)}>
+      {isSideBarOpen ? <CloseIcon /> : <MenuIcon />}
     </Container>
   );
 }

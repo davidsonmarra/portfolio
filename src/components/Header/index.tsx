@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DarkModeIcon } from '../Svgs/DarkModeIcon';
 import { LightModeIcon } from '../Svgs/LightModeIcon';
 import { SideBar } from '../SideBar';
+import { SideBarMenu } from '../SideBarMenu';
 import { 
   Container, 
   Content,
@@ -22,6 +23,11 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ themeMode, changeTheme }) => {
   const { width } = useWindowDimensions();
+  const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
+
+  const handleOpenSideBar = (isOpen : boolean) => {
+    setIsSideBarOpen(!isOpen);
+  }
 
   return (
     <Container>
@@ -50,7 +56,14 @@ export const Header: React.FC<HeaderProps> = ({ themeMode, changeTheme }) => {
               </NavItem>
             </NavList>
           </NavBar> :
-          <SideBar />
+          <>
+            <SideBar isSideBarOpen={isSideBarOpen} handleOpenSideBar={handleOpenSideBar} />
+            <SideBarMenu 
+              isSideBarOpen={isSideBarOpen} 
+              themeMode={themeMode}
+              changeTheme={changeTheme}
+            />
+          </>
         }
       </Content>
     </Container>
