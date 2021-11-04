@@ -1,12 +1,22 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+interface ContainerProps {
+  readonly isTop: boolean;
+}
+
+export const Container = styled.section<ContainerProps>`
+  position: fixed;
   background: ${({ theme }) => theme.colors.headerBackground};
-  transition: all 0.50s ease-in-out;
+  transition: all .5s ease-in-out, box-shadow .8s ease-in-out;
+  box-shadow: ${({ isTop }) => !isTop ? 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;' : ''};
+  width: 100%;
+  top: 0;
+  z-index: 1;
 `;
 
-export const Content = styled.div`
-  padding: 1.5rem 1rem;
+export const Content = styled.div<ContainerProps>`
+  transition: all 0.50s ease-in-out;
+  padding: ${({ isTop }) => isTop ? '2rem 1rem' : '1.2rem 1rem'};
   max-width: 1120px;
   margin: 0 auto;
   display: flex;
@@ -18,6 +28,7 @@ export const Content = styled.div`
 export const Name = styled.h2`
   font-weight: 500;
   font-size: 16.5px;
+  
 `;
 
 export const NameLink = styled.a`
@@ -52,7 +63,7 @@ export const Section = styled.a`
   position: relative;
   transition: all 0.25s ease-out;
   :hover {
-    filter: brightness(0.8);
+    filter: ${({ theme }) => theme.colors.filterText};
   }
   ::after {
     content: '';
@@ -62,7 +73,7 @@ export const Section = styled.a`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background: ${({ theme }) => `linear-gradient(140deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 60%)`};
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -82,7 +93,7 @@ export const ThemeIconContainer = styled.div`
   transition: all .3s;
   :hover {
     cursor: pointer;
-    background: #22222222;
-    filter: brightness(0.8);
+    filter: ${({ theme }) => theme.colors.filterIcon};
+    background: ${({ theme }) => theme.colors.backgroundThemeIcon};
   }
 `;

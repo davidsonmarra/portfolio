@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Header } from './components/Header';
 import { GlobalStyle } from './global/styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './global/styles/theme';
+import { Home } from './sections/Home';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Header themeMode={isDarkTheme} changeTheme={handleChanceMode}/>
+      <Home themeMode={isDarkTheme} changeTheme={handleChanceMode}/>
     </ThemeProvider>
   );
 }

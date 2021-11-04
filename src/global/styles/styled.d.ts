@@ -10,6 +10,9 @@ declare module 'styled-components' {
       primary: string;
       secondary: string;
       themeIcon: string;
+      backgroundThemeIcon: string;
+      filterIcon: string;
+      filterText: string;
     };
   }
 }

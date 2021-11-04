@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DarkModeIcon } from '../Svgs/DarkModeIcon';
 import { LightModeIcon } from '../Svgs/LightModeIcon';
 import { SideBar } from '../SideBar';
@@ -15,6 +15,7 @@ import {
   ThemeIconContainer
 } from './styles';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
+import { handleTop } from '../../utils/functions';
 
 interface HeaderProps {
   themeMode: boolean;
@@ -24,14 +25,22 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ themeMode, changeTheme }) => {
   const { width } = useWindowDimensions();
   const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
+  const [isTop, setIsTop] = useState<boolean>(true);
+
+  useEffect(() => {
+      document.addEventListener("scroll", () => handleTop(setIsTop, 50));
+      return () => {
+      document.removeEventListener("scroll", () => handleTop(setIsTop, 50));
+    };
+  }, [])
 
   const handleOpenSideBar = (isOpen : boolean) => {
     setIsSideBarOpen(!isOpen);
   }
 
   return (
-    <Container>
-      <Content>
+    <Container isTop={isTop}>
+      <Content isTop={isTop}>
         <Name><NameLink href="#">Davidson</NameLink></Name>
         {
           width > 920 ?

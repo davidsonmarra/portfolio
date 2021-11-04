@@ -11,7 +11,7 @@ export const Container = styled.nav<ContainerProps>`
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.secondary};
   display: flex;
   justify-content: center;
   align-items: center;
