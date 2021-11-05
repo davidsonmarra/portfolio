@@ -11,7 +11,7 @@ export const Container = styled.nav<ContainerProps>`
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.sidebarBackground};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ export const SideBarList = styled.ul`
 
 export const Link = styled.a`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.headerText};
+  color: ${({ theme }) => theme.colors.background};
   transition: all .3s;
   opacity: 1;
   &:hover li {

@@ -4,6 +4,7 @@ export const lightTheme: DefaultTheme = {
   colors: {
     background: 'hsl(250, 60%, 95%)',
     headerBackground: 'hsl(250, 60%, 95%)',
+    sidebarBackground: '#490ECD',
     headerText: '#222',
     text: '#222',
     primary: '#490ECD',
@@ -19,6 +20,7 @@ export const darkTheme: DefaultTheme = {
   colors: {
     background: 'hsl(250, 28%, 12%)',
     headerBackground: 'hsl(250, 28%, 12%)',
+    sidebarBackground: '#D9A404',
     headerText: '#fefefe',
     text: '#fefefe',
     primary: '#D9A404',
