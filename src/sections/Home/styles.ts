@@ -9,7 +9,7 @@ const shine = keyframes`
   100% { background-position: 0% }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   height: 100vh;
   position: relative;
   display: flex;
