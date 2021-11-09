@@ -39,5 +39,9 @@ export const SideBarItem = styled.li`
   font-size: 24px;
   & svg {
     margin-right: 1rem;
+    transition: all 1s;
+    :hover {
+      filter: ${({ theme }) => theme.colors.filterIcon};
+    }
   }
 `;

@@ -12,9 +12,10 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, style }) =
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
         origin: 'top',
-        distance: '80px',
+        distance: '10rem',
         reset: true,
-        delay: 500
+        delay: 500,
+        mobile: true
       });
   }, []);
 
@@ -22,7 +23,6 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, style }) =
     <Container
       ref={sectionRef}
       style={style}
-      className="scroll-section"
       data-testid="section"
     >
       {children}

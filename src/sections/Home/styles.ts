@@ -21,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h1`
-  margin-bottom: 4rem;
+  margin-top: 4rem;
   background-color: ${({ theme }) => theme.colors.primary};
   background-image: ${({ theme }) => `linear-gradient(
     -75deg,
@@ -39,6 +39,7 @@ export const Name = styled.h1`
   transition: 1.2s;
   text-align: center;
   animation: ${shine} 2s linear infinite;
+  font-size: 2rem;
   @media (max-width: 472px) {
     width: 100%;
     white-space: normal;
