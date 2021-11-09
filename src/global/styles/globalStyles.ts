@@ -8,12 +8,24 @@ export const GlobalStyle = createGlobalStyle`
   }
   // front-size: 16px (Desktop)
   html {
+    scroll-behavior: smooth;
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
     }
     @media (max-width: 720) {
       font-size: 87.5%; // 14px
     }
+  }
+  ::-webkit-scrollbar {
+    width: 0.65rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => `linear-gradient(140deg, ${theme.colors.secondary} 0%, ${theme.colors.primary} 60%)`};
+    /* border-radius: 1rem; */
+    transition: all 0.50s ease-in-out;
   }
   
   // REM = 1rem = 16px => sempre usaremos rem para responsividade
@@ -37,3 +49,4 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
 `;
+

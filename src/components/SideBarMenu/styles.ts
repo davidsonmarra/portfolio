@@ -6,8 +6,8 @@ interface ContainerProps {
 
 export const Container = styled.nav<ContainerProps>`
   position: fixed;
-  right: ${({ isSideBarOpen }) => isSideBarOpen ? '0' : '-100%' };
-  transition: all 850ms, background-color 350ms;
+  right: ${({ isSideBarOpen }) => isSideBarOpen ? '0' : '-120%' };
+  transition: all 1050ms, background-color 350ms;
   top: 0;
   width: 100vw;
   height: 100vh;

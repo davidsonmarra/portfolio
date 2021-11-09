@@ -4,19 +4,27 @@ import scrollReveal from 'scrollreveal';
 
 interface ScrollRevealProps {
   style?: CSSProperties;
+  origin: string;
+  distance: string;
 }
 
-export const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, style }) => {
+export const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
+  children, 
+  origin,
+  distance,
+  style 
+}) => {
   const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        origin: 'top',
-        distance: '10rem',
-        reset: true,
+        origin: origin,
+        distance: distance,
+        reset: false,
         delay: 500,
         mobile: true
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

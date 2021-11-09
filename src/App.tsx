@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Home } from './sections/Home';
+import { AboutMe } from './sections/AboutMe';
 import { GlobalStyle } from './global/styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './global/styles/theme';
-import { Home } from './sections/Home';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -25,6 +26,7 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
       <Home themeMode={isDarkTheme} changeTheme={handleChanceMode}/>
+      <AboutMe />
     </ThemeProvider>
   );
 }

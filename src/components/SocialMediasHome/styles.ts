@@ -26,16 +26,18 @@ export const Icons = styled.div`
 export const Link = styled.a`
   & + a {
     margin-top: 2rem;
-    @media (max-width: 600px) {
-      margin-top: 0;
-      margin-left: 2rem;
-    }
   }
   svg {
     transition: all .3s;
     :hover {
       cursor: pointer;
       filter: brightness(0.8);
+    }
+  }
+  @media (max-width: 600px) {
+    & + a {
+      margin-top: 0;
+      margin-left: 2rem;
     }
   }
 `;
