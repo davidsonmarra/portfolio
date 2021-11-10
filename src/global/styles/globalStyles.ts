@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => `${theme.colors.primary} ${theme.colors.background}`};
   }
   // front-size: 16px (Desktop)
   html {
@@ -24,8 +26,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => `linear-gradient(140deg, ${theme.colors.secondary} 0%, ${theme.colors.primary} 60%)`};
+    background: ${({ theme }) => theme.colors.primary};
     transition: all 0.50s ease-in-out;
+    :hover {
+      background: ${({ theme }) => theme.colors.secondary};
+    }
   }
   
   // REM = 1rem = 16px => sempre usaremos rem para responsividade

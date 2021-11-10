@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  /* height: 100vh; */
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   max-width: 920px;
   margin: 0 auto;
   margin-bottom: 2rem;

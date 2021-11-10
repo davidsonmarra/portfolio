@@ -9,7 +9,7 @@ export const lightTheme: DefaultTheme = {
     text: '#222',
     title: '#111',
     primary: '#490ECD',
-    secondary: '#B330EA',
+    secondary: '#915EFF', //B330EA
     themeIcon: '#490ECD',
     backgroundThemeIcon: '#22222222',
     filterIcon: 'brightness(0.8)',

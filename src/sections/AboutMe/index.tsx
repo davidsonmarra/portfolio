@@ -24,8 +24,8 @@ export const AboutMe: React.FC = () => {
         "Desenvolvedor Mobile", 
         "Desenvolvedor Back-End", 
         "Desenvolvedor Full-Stack",
-        "Técnico em eletrônica",
-        "Estudante de TI"
+        "Freelancer",
+        "Técnico em eletrônica"
       ], 
       startDelay: 300,
       typeSpeed: 100,
@@ -75,7 +75,7 @@ export const AboutMe: React.FC = () => {
                 <Description>
                   Atualmente sou Programador em desenvolvimento Mobile com React Native na Compasso UOL e estou em busca de adquirir experiências e aumentar meus conhecimentos na área. <br/>
                   Estou cursando Engenharia da Computação na PUC Minas e fiz curso técnico integrado de eletrônica no COLTEC.<br/>
-                  Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS no ambiente web.
+                  Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS na web.
                 </Description>
               </DescriptionContainer>
             </TextContainer>
