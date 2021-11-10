@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
   * {
     margin: 0;
     padding: 0;
@@ -17,14 +18,13 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   ::-webkit-scrollbar {
-    width: 0.65rem;
+    width: 0.5rem;
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => `linear-gradient(140deg, ${theme.colors.secondary} 0%, ${theme.colors.primary} 60%)`};
-    /* border-radius: 1rem; */
     transition: all 0.50s ease-in-out;
   }
   
@@ -47,6 +47,15 @@ export const GlobalStyle = createGlobalStyle`
   [disbbled] {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+  .typed-cursor{
+    font-size: 1rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.primary};
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
   }
 `;
 

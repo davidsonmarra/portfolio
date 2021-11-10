@@ -22,7 +22,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
         distance: distance,
         reset: false,
         delay: 500,
-        mobile: true
+        mobile: false
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
