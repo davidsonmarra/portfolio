@@ -9,6 +9,7 @@ declare module 'styled-components' {
       headerText: string;
       title: string;
       titleSecondary: string;
+      dataTimeText: string;
       text: string;
       primary: string;
       secondary: string;

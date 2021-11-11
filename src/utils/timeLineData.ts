@@ -2,7 +2,7 @@ export const dataAcademy = [
   {
     title: "Engenharia da Computação",
     local: "PUC Minas",
-    date: "2021 - 2024",
+    date: "2021 - 2025",
     id: 1
   },
   {
@@ -15,13 +15,13 @@ export const dataAcademy = [
 
 export const dataProfessional = [
   {
-    title: "Programador Trainee - Densenvolvimento Mobile",
+    title: "Dev Mobile - Trainee",
     local: "Compasso UOL",
-    date: "2021",
+    date: "2021 - o momento",
     id: 1
   },
   {
-    title: "Estagiário - Densenvolvimento Front-End",
+    title: "Dev Front-End - Estagiário",
     local: "Compasso UOL",
     date: "2021",
     id: 2

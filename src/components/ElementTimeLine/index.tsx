@@ -4,10 +4,12 @@ import {
   Title, 
   Local, 
   Date, 
+  DateText,
   Ball, 
   Line 
 } from './styles';
 import { DataProps } from '../TimeLine';
+import { DateIcon } from '../Svgs/DateIcon';
 
 interface ElementTimeLineProps {
   item: DataProps;
@@ -20,9 +22,9 @@ const ElementTimeLine: React.FC<ElementTimeLineProps> = ({
 }) => {
   return (
     <Container item={item}>
-      <Title>{item.title}</Title>
+      <Title item={item}>{item.title}</Title>
       <Local>{item.local}</Local>
-      <Date>{item.date}</Date>
+      <Date><DateIcon /><DateText>{item.date}</DateText></Date>
       <Ball />
       <Line index={item.id} max={max} />
     </Container>

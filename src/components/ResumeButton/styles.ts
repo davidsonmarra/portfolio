@@ -35,6 +35,7 @@ export const Content = styled.div`
   align-items: center;
   transition: all .5s ease-in-out;
   & svg {
+    transition: all .5s ease-in-out;
     margin-right: .5rem;
   }
   color: ${({ theme }) => theme.colors.background};

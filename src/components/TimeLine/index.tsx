@@ -20,7 +20,17 @@ export interface DataProps {
 
 export const TimeLine: React.FC = () => {
   const [isAcademy, setIsAcademy] = useState<boolean>(true);
-  const [data, setData] = useState<DataProps[]>(dataAcademy)
+  const [data, setData] = useState<DataProps[]>(dataAcademy);
+
+  const handleChoseAcademy = () => {
+    setIsAcademy(true);
+    setData(dataAcademy);
+  }
+
+  const handleChoseProfessional = () => {
+    setIsAcademy(false);
+    setData(dataProfessional);
+  }
 
   return (
     <Container>
@@ -30,14 +40,14 @@ export const TimeLine: React.FC = () => {
         <TitleSection 
           className="academy"
           isAcademy={isAcademy}
-          onClick={() => setIsAcademy(true)}
+          onClick={handleChoseAcademy}
         >
           <SchoolIcon /> Acadêmica
         </TitleSection>
         <TitleSection 
           className="work"
           isAcademy={isAcademy}
-          onClick={() => setIsAcademy(false)}
+          onClick={handleChoseProfessional}
         >
           <WorkIcon className="work-icon"/> Profissional
         </TitleSection>

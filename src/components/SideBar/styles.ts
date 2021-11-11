@@ -4,7 +4,7 @@ export const Container = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 999;
   svg { 
     transition: all .3s;
   }

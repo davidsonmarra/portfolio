@@ -18,6 +18,7 @@ export const Container = styled.div`
   align-items: center;
   max-width: 1120px;
   margin: 0 auto;
+  z-index: 2;
 `;
 
 export const Name = styled.h1`

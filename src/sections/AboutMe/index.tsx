@@ -15,6 +15,7 @@ import { Container,
   Description
 } from './styles';
 import { TimeLine } from '../../components/TimeLine';
+import { Anchor } from '../../components/Anchor';
 
 interface AboutMeProps {
   themeMode: boolean;
@@ -48,7 +49,8 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
   }, []);
 
   return (
-    <Container id="about">
+    <Container>
+      <Anchor id="about" />
       <ScrollReveal 
         origin="top"
         distance="10rem"

@@ -14,7 +14,7 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 0 1rem;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   @media (max-width: 675px) {
     padding: 0;
     flex-direction: column

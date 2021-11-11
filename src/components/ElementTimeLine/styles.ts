@@ -16,17 +16,39 @@ export const Container = styled.li<ContainerProps>`
   align-items: ${({ item }) => item.id % 2 === 0 ? 
   'flex-end' : 'flex-start'};
   position: relative;
+  padding: 1.5rem 0;
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h4<ContainerProps>`
   color: ${({ theme }) => theme.colors.title};
+  text-align: ${({ item }) => item.id % 2 === 0 ? 
+  'end' : 'start'};
+  font-size: 1.15rem;
+  @media (max-width: 570px) {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 export const Local = styled.span`
   color: ${({ theme }) => theme.colors.titleSecondary};
+  margin-bottom: .5rem;
 `;
 
-export const Date = styled.span`
+export const Date = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.dataTimeText};
+  & svg {
+    margin-right: .25rem
+  }
+`;
+
+export const DateText = styled.span`
+  transform: translateY(4%);
 `;
 
 export const Ball = styled.div`
