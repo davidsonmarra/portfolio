@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { ScrollReveal } from '../../components/ScrollReveal';
 import { SectionText } from '../../components/SectionText';
 import Typed from 'typed.js';
+import { ResumeButton } from '../../components/ResumeButton';
 import { Container, 
   Content, 
   Image, 
@@ -13,8 +14,13 @@ import { Container,
   Divider,
   Description
 } from './styles';
+import { TimeLine } from '../../components/TimeLine';
 
-export const AboutMe: React.FC = () => {
+interface AboutMeProps {
+  themeMode: boolean;
+}
+
+export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
   const uri = "/assets/me.png";
   const el = useRef<any>(null);
 
@@ -42,45 +48,46 @@ export const AboutMe: React.FC = () => {
   }, []);
 
   return (
-      <Container id="about">
-        <ScrollReveal 
-          origin="top"
-          distance="10rem"
-        >
-          <SectionText 
-            title="Sobre mim"
-            subTitle="quem eu sou"
+    <Container id="about">
+      <ScrollReveal 
+        origin="top"
+        distance="10rem"
+      >
+        <SectionText 
+          title="Sobre mim"
+          subTitle="quem eu sou"
+        />
+      <Content>
+          <Image
+            src={uri}
           />
-        </ScrollReveal>
-        <Content>
-          <ScrollReveal 
-            origin="left"
-            distance="5rem"
-          >
-            <Image
-              src={uri}
-            />
-          </ScrollReveal>
-          <ScrollReveal 
-            origin="right"
-            distance="5rem"
-          >
-            <TextContainer>
-              <TitleContainer>
-                <Title>Eu sou &nbsp;</Title>
-                <TitleDynamic ref={el}></TitleDynamic>
-              </TitleContainer>
-              <DescriptionContainer>
-                <Divider />
-                <Description>
-                  Atualmente sou Programador em desenvolvimento Mobile com React Native na Compasso UOL e estou em busca de adquirir experiências e aumentar meus conhecimentos na área. <br/>
-                  Estou cursando Engenharia da Computação na PUC Minas e fiz curso técnico integrado de eletrônica no COLTEC.<br/>
-                  Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS na web.
-                </Description>
-              </DescriptionContainer>
-            </TextContainer>
-          </ScrollReveal>
-        </Content>
-      </Container>
+          <TextContainer>
+            <TitleContainer>
+              <Title>Eu sou &nbsp;</Title>
+              <TitleDynamic ref={el}></TitleDynamic>
+            </TitleContainer>
+            <DescriptionContainer>
+              <Divider />
+              <Description>
+                Atualmente sou Programador em desenvolvimento Mobile com React Native na Compasso UOL e estou em busca de adquirir experiências e aumentar meus conhecimentos na área. <br/>
+                Estou cursando Engenharia da Computação na PUC Minas e fiz curso técnico integrado de eletrônica no COLTEC.<br/>
+                Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS na web.
+              </Description>
+            </DescriptionContainer>
+            <ResumeButton themeMode={themeMode} />
+          </TextContainer>
+      </Content>
+      </ScrollReveal>
+      <ScrollReveal 
+        origin="top"
+        distance="10rem"
+      >
+        <SectionText 
+          title="Qualificação"
+          subTitle="minha jornada"
+        />
+        <TimeLine />
+      </ScrollReveal>
+    </Container>
   );
 }

@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import { SchoolIcon } from '../Svgs/SchoolIcon';
+import { WorkIcon } from '../Svgs/WorkIcon';
+import { 
+  Container, 
+  TitleContainer, 
+  TitleSection, 
+  TimeLineContainer,
+  List
+} from './styles';
+import { dataAcademy, dataProfessional } from '../../utils/timeLineData';
+import ElementTimeLine from '../ElementTimeLine';
+
+export interface DataProps {
+  title: string;
+  local: string;
+  date: string;
+  id: number;
+}
+
+export const TimeLine: React.FC = () => {
+  const [isAcademy, setIsAcademy] = useState<boolean>(true);
+  const [data, setData] = useState<DataProps[]>(dataAcademy)
+
+  return (
+    <Container>
+      <TitleContainer 
+        isAcademy={isAcademy}
+      >
+        <TitleSection 
+          className="academy"
+          isAcademy={isAcademy}
+          onClick={() => setIsAcademy(true)}
+        >
+          <SchoolIcon /> Acadêmica
+        </TitleSection>
+        <TitleSection 
+          className="work"
+          isAcademy={isAcademy}
+          onClick={() => setIsAcademy(false)}
+        >
+          <WorkIcon className="work-icon"/> Profissional
+        </TitleSection>
+      </TitleContainer>
+      <TimeLineContainer>
+          <List>
+            {
+              data.map((it, i) =>
+                <ElementTimeLine 
+                  key={i}
+                  item={it}
+                  max={data.length + 1}
+                />
+              )
+            }
+          </List>
+        </TimeLineContainer>
+    </Container>
+  );
+}

@@ -8,10 +8,12 @@ export const lightTheme: DefaultTheme = {
     headerText: '#222',
     text: '#222',
     title: '#111',
+    titleSecondary: '#22222299',
     primary: '#490ECD',
     secondary: '#915EFF', //B330EA
     themeIcon: '#490ECD',
-    backgroundThemeIcon: '#22222222',
+    backgroundThemeIcon: '#22222215',
+    backgroundThemeIcon2: '#22222208',
     filterIcon: 'brightness(0.8)',
     filterText: 'brightness(1.2)'
   }
@@ -25,10 +27,12 @@ export const darkTheme: DefaultTheme = {
     headerText: '#fefefe',
     text: '#fefefe',
     title: '#fff',
+    titleSecondary: '#dddddd99',
     primary: '#D9A404',
     secondary: '#F2CB05',
     themeIcon:'#D9A404',
     backgroundThemeIcon: '#dddddd22',
+    backgroundThemeIcon2: '#dddddd11',
     filterIcon: 'brightness(1.2)',
     filterText: 'brightness(0.8)'
   }

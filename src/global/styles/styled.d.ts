@@ -8,11 +8,13 @@ declare module 'styled-components' {
       sidebarBackground: string;
       headerText: string;
       title: string;
+      titleSecondary: string;
       text: string;
       primary: string;
       secondary: string;
       themeIcon: string;
       backgroundThemeIcon: string;
+      backgroundThemeIcon2: string;
       filterIcon: string;
       filterText: string;
     };

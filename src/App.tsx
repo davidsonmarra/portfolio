@@ -9,7 +9,7 @@ function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const keyTheme = "@davidsonmarra:theme";
 
-  const handleChanceMode = (state: boolean) => {
+  const handleChangeMode = (state: boolean) => {
     localStorage.setItem(keyTheme, String(!state));
     setIsDarkTheme(!state);
   }
@@ -25,8 +25,8 @@ function App() {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Home themeMode={isDarkTheme} changeTheme={handleChanceMode}/>
-      <AboutMe />
+      <Home themeMode={isDarkTheme} changeTheme={handleChangeMode}/>
+      <AboutMe themeMode={isDarkTheme} />
     </ThemeProvider>
   );
 }

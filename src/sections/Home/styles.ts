@@ -56,7 +56,7 @@ export const CartoonContainer = styled.div<CartoonContainerProps>`
   width: 23rem;
   height: 23rem;
   overflow: hidden;
-  @media (max-width: 560px) {
+  @media (max-width: 675px) {
     width: 18rem;
     height: 18rem;
   }
@@ -69,7 +69,7 @@ export const Cartoon = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  @media (max-width: 560px) {
+  @media (max-width: 675px) {
     width: 15rem;
   }
 `;
