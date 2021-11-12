@@ -45,6 +45,7 @@ export const SvgContainer = styled.div`
   width: 1.9rem;
   height: 1.9rem;
   svg {
+    transition: all 0.2s linear;
     transform: translateX(-20%);
   }
   .left {

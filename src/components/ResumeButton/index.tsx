@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResumeIcon } from '../Svgs/ResumeIcon';
+import { ResumeIcon } from '../Svgs';
 import { Container, Content, Download } from './styles';
 
 interface ResumeButtonProps {

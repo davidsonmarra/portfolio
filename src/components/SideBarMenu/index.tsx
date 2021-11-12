@@ -1,8 +1,10 @@
 import React from 'react';
-import { AboutIcon } from '../Svgs/AboutIcon';
-import { ContactMeIcon } from '../Svgs/ContactMeIcon';
-import { HardSkillsIcon } from '../Svgs/HardSkillsIcon';
-import { ProjectsIcon } from '../Svgs/ProjectsIcon';
+import { 
+  AboutIcon,
+  ContactMeIcon,
+  HardSkillsIcon,
+  ProjectsIcon
+} from '../Svgs';
 import SwitchTheme from '../SwitchTheme';
 import { Container, SideBarList, Link, SideBarItem } from './styles';
 

@@ -1,7 +1,9 @@
 import React from 'react';
-import { GitHubIcon } from '../Svgs/GitHubIcon';
-import { TelegramIcon } from '../Svgs/TelegramIcon';
-import { LinkdlnIcon } from '../Svgs/LinkdlnIcon';
+import { 
+  GitHubIcon,
+  TelegramIcon,
+  LinkdlnIcon
+} from '../Svgs';
 import { Container, Icons, Link } from './styles';
 
 export const SocialMediasHome: React.FC = () => {

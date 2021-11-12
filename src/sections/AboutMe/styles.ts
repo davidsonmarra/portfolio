@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const Divider = styled.div`
-  width: 1rem ;
+  width: 1rem;
   background: ${({ theme }) => `linear-gradient(140deg, ${theme.colors.secondary} 0%, ${theme.colors.primary} 60%)`};
   margin-right: .5rem;
   @media (max-width: 675px) {

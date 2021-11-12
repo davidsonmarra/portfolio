@@ -4,6 +4,7 @@ import { AboutMe } from './sections/AboutMe';
 import { GlobalStyle } from './global/styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './global/styles/theme';
+import { Skills } from './sections/Skills';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -27,6 +28,7 @@ function App() {
       <GlobalStyle />
       <Home themeMode={isDarkTheme} changeTheme={handleChangeMode}/>
       <AboutMe themeMode={isDarkTheme} />
+      <Skills themeMode={isDarkTheme} />
     </ThemeProvider>
   );
 }

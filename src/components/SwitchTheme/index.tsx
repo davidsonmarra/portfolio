@@ -1,6 +1,5 @@
 import React from 'react';
-import { LightModeIcon } from '../Svgs/LightModeIcon';
-import { DarkModeIcon } from '../Svgs/DarkModeIcon';
+import { LightModeIcon, DarkModeIcon } from '../Svgs';
 import { Container, SvgContainer } from './styles';
 
 interface SwitchProps {

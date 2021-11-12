@@ -9,7 +9,7 @@ import {
   Line 
 } from './styles';
 import { DataProps } from '../TimeLine';
-import { DateIcon } from '../Svgs/DateIcon';
+import { DateIcon } from '../Svgs';
 
 interface ElementTimeLineProps {
   item: DataProps;

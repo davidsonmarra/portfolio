@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { SchoolIcon } from '../Svgs/SchoolIcon';
-import { WorkIcon } from '../Svgs/WorkIcon';
+import { SchoolIcon, WorkIcon } from '../Svgs';
 import { 
   Container, 
   TitleContainer, 

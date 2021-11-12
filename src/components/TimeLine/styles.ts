@@ -7,7 +7,6 @@ interface TitleSectionProps {
 export const Container = styled.div`
   padding: 0 1rem;
   width: 100%;
-  margin-bottom: 100rem
 `;
 
 export const TitleContainer = styled.div<TitleSectionProps>`

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DarkModeIcon } from '../Svgs/DarkModeIcon';
-import { LightModeIcon } from '../Svgs/LightModeIcon';
+import { DarkModeIcon, LightModeIcon } from '../Svgs';
 import { SideBar } from '../SideBar';
 import { SideBarMenu } from '../SideBarMenu';
 import { 

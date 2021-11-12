@@ -1,6 +1,5 @@
 import React from 'react';
-import { CloseIcon } from '../Svgs/CloseIcon';
-import { MenuIcon } from '../Svgs/MenuIcon';
+import { CloseIcon, MenuIcon } from '../Svgs';
 import { Container } from './styles';
 
 interface SideBarProps {
