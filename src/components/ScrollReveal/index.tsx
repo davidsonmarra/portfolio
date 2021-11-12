@@ -6,12 +6,14 @@ interface ScrollRevealProps {
   style?: CSSProperties;
   origin: string;
   distance: string;
+  delay?: number;
 }
 
 export const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
   origin,
   distance,
+  delay = 500,
   style 
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,7 +23,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
         origin: origin,
         distance: distance,
         reset: false,
-        delay: 500,
+        delay: delay,
         mobile: false
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps

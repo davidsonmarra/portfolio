@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Anchor } from '../../components/Anchor';
 import { ScrollReveal } from '../../components/ScrollReveal';
 import { SectionText } from '../../components/SectionText';
 import { Container, SkillsContainer } from './styles';
 import { Skill } from '../../components/Skill';
-import animationBackEndLight from './animationBackEndLight.json';
-import animationBackEndDark from './animationBackEndDark.json';
-
-// import animationFrontEndLight from './animationFrontEndLight.json';
-import animationFrontEndDark from './animationFrontEndDark.json';
-
-import animationMobileLight from './animationMobileLight.json';
-import animationMobileDark from './animationMobileDark.json';
+import { data } from '../../utils/skillsCards';
 
 interface SkillsProps {
   themeMode: boolean;
 }
 
+interface DataSkillsProps {
+  title: string;
+  imageDark: any,
+  imageLight: any,
+  id: number
+}
+
 export const Skills: React.FC<SkillsProps> = ({
   themeMode
 }) => {
+  // eslint-disable-next-line
+  const [dataSkills, setDataSkills] = useState<DataSkillsProps[]>(data);
   
 
   return (
@@ -34,7 +36,18 @@ export const Skills: React.FC<SkillsProps> = ({
           subTitle="o que eu sei"
         />
         <SkillsContainer>
-          <Skill animationData={
+          {
+            dataSkills.map((item, index) => 
+            <Skill 
+              key={index}
+              animationData={
+              themeMode ? item.imageDark : 
+              item.imageLight} 
+              title={item.title}
+              delay={(index * 500) + 500}
+            />)
+          }
+          {/* <Skill animationData={
             themeMode ? animationBackEndDark : 
             animationBackEndLight} 
             title="Back-End"
@@ -47,7 +60,7 @@ export const Skills: React.FC<SkillsProps> = ({
             themeMode ? animationMobileDark : 
             animationMobileLight} 
             title="Mobile"
-          />
+          /> */}
         </SkillsContainer>
       </ScrollReveal>
     </Container>

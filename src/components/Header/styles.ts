@@ -11,7 +11,7 @@ export const Container = styled.section<ContainerProps>`
   box-shadow: ${({ isTop }) => !isTop ? 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;' : ''};
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 99999;
 `;
 
 export const Content = styled.div<ContainerProps>`

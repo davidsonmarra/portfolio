@@ -10,4 +10,10 @@ export const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
 `;

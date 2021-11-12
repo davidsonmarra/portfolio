@@ -10,6 +10,7 @@ export const Container = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.primary};
   transition: all .5s ease-in-out;
   position: relative;
+  z-index: 1;
   &::before {
     content: '';
     position: absolute;
@@ -34,6 +35,7 @@ export const Container = styled.div`
     }
     svg {
       fill: ${({ theme }) => theme.colors.primary};
+      transform: translateX(15%);
     }
   }
   svg {
@@ -58,6 +60,11 @@ export const Container = styled.div`
       transform: scaleX(0)
     }
   }
+  @media (max-width: 800px) {
+    margin-bottom: 0rem;
+    /* width: 80%; */
+    margin-bottom: 2rem;
+  }
 `;
 
 export const SymbolContainer = styled.div`
@@ -65,11 +72,7 @@ export const SymbolContainer = styled.div`
   z-index: 2;
 `;
 
-export const Symbol = styled(Lottie).attrs({
-  height: '8rem',
-})`
-
-`;
+export const Symbol = styled(Lottie)``;
 
 export const Title = styled.h3`
   text-align: center;
