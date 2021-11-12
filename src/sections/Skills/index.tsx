@@ -6,23 +6,40 @@ import { Container, SkillsContainer } from './styles';
 import { Skill } from '../../components/Skill';
 import { data } from '../../utils/skillsCards';
 
+
 interface SkillsProps {
   themeMode: boolean;
+  openModal: () => void;
+  setModalData: (data: ModalDataProps) => void;
+}
+
+export interface ModalDataProps {
+  imageLight: any,
+  imageDark: any,
+  title: string;
+  text: string[];
 }
 
 interface DataSkillsProps {
   title: string;
-  imageDark: any,
-  imageLight: any,
-  id: number
+  imageDark: any;
+  imageLight: any;
+  id: number;
+  modal: ModalDataProps;
 }
 
 export const Skills: React.FC<SkillsProps> = ({
-  themeMode
+  themeMode,
+  openModal,
+  setModalData
 }) => {
   // eslint-disable-next-line
   const [dataSkills, setDataSkills] = useState<DataSkillsProps[]>(data);
-  
+
+  const handleClickSkill = (data: any) => {
+    setModalData(data);
+    openModal();
+  }
 
   return (
     <Container >
@@ -44,23 +61,11 @@ export const Skills: React.FC<SkillsProps> = ({
               themeMode ? item.imageDark : 
               item.imageLight} 
               title={item.title}
+              modalData={item.modal}
               delay={(index * 500) + 500}
+              handleClickSkill={handleClickSkill}
             />)
           }
-          {/* <Skill animationData={
-            themeMode ? animationBackEndDark : 
-            animationBackEndLight} 
-            title="Back-End"
-          />
-          <Skill 
-            animationData={animationFrontEndDark} 
-            title="Front-End"
-          />
-          <Skill animationData={
-            themeMode ? animationMobileDark : 
-            animationMobileLight} 
-            title="Mobile"
-          /> */}
         </SkillsContainer>
       </ScrollReveal>
     </Container>

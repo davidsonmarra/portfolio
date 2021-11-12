@@ -33,7 +33,7 @@ export const darkTheme: DefaultTheme = {
     titleSecondary: '#ddddddCC',
     dataTimeText: '#dddddd99',
     primary: '#D9A404',
-    secondary: '#F2CB05',
+    secondary: '#F2CB05', // 
     themeIcon:'#D9A404',
     backgroundThemeIcon: '#dddddd22',
     backgroundThemeIcon2: '#dddddd11',

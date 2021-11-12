@@ -62,5 +62,63 @@ export const GlobalStyle = createGlobalStyle`
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
   }
+
+  .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all .3s;
+    z-index: 2;
+    @media (min-width: 575px) {
+      align-items: center;
+      transition: all .9s;
+    } 
+  }
+
+  .react-modal-content {
+    width: 100%;
+    max-height: 95%;
+    max-width: 576px;
+    background: ${({ theme }) => theme.colors.skillBackground};
+    padding: 1rem 2rem 2rem;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    transition: all .5s;
+    transform: translateY(200%);
+    @media (min-width: 575px) {
+      border-radius: 1rem;
+    } 
+  }
+
+  .ReactModal__Content--after-open{
+    transition: all .5s;
+    transform: translateY(0%);
+    @media (min-width: 575px) {
+      transition: all .9s;
+    } 
+  }
+
+  .react-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter .2s;
+    &:hover {
+      filter: brightness(.8);
+    }
+  }
+
+  .ReactModal__Content--before-close{
+    transition: all .5s;
+    transform: translateY(200%);
+  }
 `;
 

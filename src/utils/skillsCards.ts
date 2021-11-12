@@ -1,29 +1,73 @@
-import animationBackEndLight from './animationBackEndLight.json';
-import animationBackEndDark from './animationBackEndDark.json';
-
-// import animationFrontEndLight from './animationFrontEndLight.json';
-import animationFrontEndDark from './animationFrontEndDark.json';
-
-import animationMobileLight from './animationMobileLight.json';
-import animationMobileDark from './animationMobileDark.json';
+import {
+  animationBackEndLight,
+  animationBackEndDark,
+  animationFrontEndDark,
+  animationMobileLight,
+  animationMobileDark,
+  animationModalBackEndLight,
+  animationModalBackEndDark,
+  animationModalFrontLight,
+  animationModalMobileLight,
+  animationModalMobileDark
+} from '../components/Animations';
 
 export const data = [
   {
+    id: 1,
     title: "Back-End",
-    imageDark: animationBackEndDark,
     imageLight: animationBackEndLight,
-    id: 1
+    imageDark: animationBackEndDark,
+    modal: {
+      imageLight: animationModalBackEndLight,
+      imageDark: animationModalBackEndDark,
+      title: "Back-End",
+      text: [
+        "JavaScript",
+        "TypeScript",
+        "NodeJS",
+        "Métodos de Requisição HTTP",
+        "Códigos de Status de Respostas HTTP"
+      ]
+    }
   },
   {
+    id: 2,
     title: "Front-End",
-    imageDark: animationFrontEndDark,
     imageLight: animationFrontEndDark,
-    id: 2
+    imageDark: animationFrontEndDark,
+    modal: {
+      imageLight: animationModalFrontLight,
+      imageDark: animationModalBackEndDark,
+      title: "Front-End",
+      text: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "ReactJS",
+        "Styled Components",
+        "Redux",
+        "Axios",
+        "Sites Responsivos"
+      ]
+    }
   },
   {
+    id: 3,
     title: "Mobile",
-    imageDark: animationMobileDark,
     imageLight: animationMobileLight,
-    id: 3
+    imageDark: animationMobileDark,
+    modal: {
+      imageLight: animationModalMobileLight,
+      imageDark: animationModalMobileDark,
+      title: "Mobile",
+      text: [
+        "React Native",
+        "Styled Components",
+        "Redux",
+        "Axios",
+        "Apps Responsivos"
+      ]
+    }
   }
 ]
