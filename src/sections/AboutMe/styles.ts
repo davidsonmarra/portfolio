@@ -6,7 +6,6 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 920px;
   margin: 0 auto;
-  margin-bottom: 2rem;
 `;
 
 export const Content = styled.div`
@@ -14,7 +13,7 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 0 1rem;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
   @media (max-width: 675px) {
     padding: 0;
     flex-direction: column
@@ -84,4 +83,9 @@ export const Description = styled.p`
     margin-top: .5rem;
     padding: 0 .8rem;
   }
+`;
+
+export const Qualifications = styled.div`
+  width: 100%;
+  margin-bottom: 8rem;
 `;

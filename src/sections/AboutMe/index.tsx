@@ -12,7 +12,8 @@ import { Container,
   TitleDynamic,
   DescriptionContainer,
   Divider,
-  Description
+  Description,
+  Qualifications
 } from './styles';
 import { TimeLine } from '../../components/TimeLine';
 import { Anchor } from '../../components/Anchor';
@@ -53,7 +54,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
       <Anchor id="about" />
       <ScrollReveal 
         origin="top"
-        distance="10rem"
+        distance="3rem"
       >
         <SectionText 
           title="Sobre mim"
@@ -82,13 +83,15 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
       </ScrollReveal>
       <ScrollReveal 
         origin="top"
-        distance="10rem"
+        distance="3rem"
       >
-        <SectionText 
-          title="Qualificação"
-          subTitle="minha jornada"
-        />
-        <TimeLine />
+        <Qualifications>
+          <SectionText 
+            title="Qualificação"
+            subTitle="minha jornada"
+          />
+          <TimeLine />
+        </Qualifications>
       </ScrollReveal>
     </Container>
   );

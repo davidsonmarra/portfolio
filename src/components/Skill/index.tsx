@@ -44,7 +44,7 @@ export const Skill: React.FC<SkillProps> = ({
   return (    
       <ScrollReveal 
         origin="top"
-        distance="10rem"
+        distance="3rem"
         delay={delay}
       > 
         <Container onClick={() => handleClickSkill(modalData)}>

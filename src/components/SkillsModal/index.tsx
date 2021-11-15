@@ -88,6 +88,7 @@ export const SkillsModal: React.FC<SkillsModalProps> = ({
           options={defaultOptionsClose}
           isStopped={animationStateClose.isStopped}
           isPaused={animationStateClose.isPaused}
+          
         />
       </CloseButtonContainer>
       <SymbolContainer>

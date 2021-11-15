@@ -6,7 +6,6 @@ export const Container = styled.div`
   transition: all .5s;
   padding: 2rem 4rem 1rem;
   border-radius: 1rem;
-  margin-bottom: 10rem;
   border: 2px solid ${({ theme }) => theme.colors.primary};
   transition: all .5s ease-in-out;
   position: relative;
@@ -61,8 +60,6 @@ export const Container = styled.div`
     }
   }
   @media (max-width: 800px) {
-    margin-bottom: 0rem;
-    /* width: 80%; */
     margin-bottom: 2rem;
   }
 `;

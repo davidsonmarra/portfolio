@@ -4,6 +4,7 @@ export const Container = styled.div`
   max-width: 920px;
   margin: 0 auto;
   padding: 0 1rem;
+  margin-bottom: 8rem;
 `;
 
 export const SkillsContainer = styled.div`

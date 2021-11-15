@@ -7,6 +7,7 @@ import {
   animationModalBackEndLight,
   animationModalBackEndDark,
   animationModalFrontLight,
+  animationModalFrontDark,
   animationModalMobileLight,
   animationModalMobileDark
 } from '../components/Animations';
@@ -37,7 +38,7 @@ export const data = [
     imageDark: animationFrontEndDark,
     modal: {
       imageLight: animationModalFrontLight,
-      imageDark: animationModalBackEndDark,
+      imageDark: animationModalFrontDark,
       title: "Front-End",
       text: [
         "HTML",

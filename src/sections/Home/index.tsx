@@ -20,7 +20,7 @@ export const Home: React.FC<HomeProps> = ({ themeMode, changeTheme }) => {
       <Header themeMode={themeMode} changeTheme={changeTheme} />
       <ScrollReveal
         origin="top"
-        distance="10rem"
+        distance="3rem"
       >
         <Tilt glareBorderRadius="50%" glareEnable={true} glareMaxOpacity={0.4} glareColor="lightblue" glarePosition="all" perspective={2000}>
           <CartoonContainer themeMode={themeMode}>

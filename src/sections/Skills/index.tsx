@@ -46,7 +46,7 @@ export const Skills: React.FC<SkillsProps> = ({
       <Anchor id="skills" />
       <ScrollReveal 
         origin="top"
-        distance="10rem"
+        distance="3rem"
       >
         <SectionText
           title="Habilidades"

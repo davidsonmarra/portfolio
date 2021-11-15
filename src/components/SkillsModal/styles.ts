@@ -25,7 +25,6 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style: none;
-  /* width: 75%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +35,6 @@ export const ListItem = styled.li`
 export const CheckContainer = styled.div`
   position: absolute;
   left: -1.5rem;
-  /* left: 0; */
 `;
 
 export const Check = styled(Lottie)``;

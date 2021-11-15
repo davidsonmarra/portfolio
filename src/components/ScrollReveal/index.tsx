@@ -7,6 +7,7 @@ interface ScrollRevealProps {
   origin: string;
   distance: string;
   delay?: number;
+  duration?: number;
 }
 
 export const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
@@ -14,7 +15,8 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   origin,
   distance,
   delay = 500,
-  style 
+  duration = 2500,
+  style
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -22,6 +24,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
       scrollReveal().reveal(sectionRef.current, {
         origin: origin,
         distance: distance,
+        duration: duration,
         reset: false,
         delay: delay,
         mobile: false

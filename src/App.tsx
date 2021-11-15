@@ -8,6 +8,7 @@ import { ModalDataProps, Skills } from './sections/Skills';
 import Modal from 'react-modal';
 import { SkillsModal } from './components/SkillsModal';
 import { data } from './utils/skillsCards';
+import { Projects } from './sections/Projects';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -56,6 +57,7 @@ function App() {
         openModal={handleOpenSkillsModal}
         setModalData={setModalData}
       />
+      <Projects />
     </ThemeProvider>
   );
 }

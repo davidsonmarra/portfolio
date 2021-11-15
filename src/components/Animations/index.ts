@@ -12,7 +12,8 @@ import animationModalBackEndDark from './animationModalBackEndDark.json';
 import animationCheckLight from './animationCheckLight.json';
 import animationCheckDark from './animationCheckDark.json';
 
-import animationModalFrontLight from './animationModalFronEndLight.json';
+import animationModalFrontLight from './animationModalFrontEndLight.json';
+import animationModalFrontDark from './animationModalFrontEndDark.json';
 
 import animationModalMobileLight from './animationModalMobileLight.json';
 import animationModalMobileDark from './animationModalMobileDark.json';
@@ -29,6 +30,7 @@ export {
   animationModalBackEndLight,
   animationModalBackEndDark,
   animationModalFrontLight,
+  animationModalFrontDark,
   animationModalMobileLight,
   animationModalMobileDark,
   animationCheckLight,
