@@ -7,6 +7,7 @@ declare module 'styled-components' {
       headerBackground: string;
       sidebarBackground: string;
       skillBackground: string;
+      btnTopBackground: string;
       headerText: string;
       title: string;
       titleSecondary: string;

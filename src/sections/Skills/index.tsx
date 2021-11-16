@@ -64,6 +64,7 @@ export const Skills: React.FC<SkillsProps> = ({
               modalData={item.modal}
               delay={(index * 500) + 500}
               handleClickSkill={handleClickSkill}
+              lastItem={(dataSkills.length - 1) === index}
             />)
           }
         </SkillsContainer>

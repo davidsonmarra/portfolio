@@ -17,6 +17,7 @@ interface SkillProps {
   delay: number;
   handleClickSkill: (data: any) => void;
   modalData: ModalDataProps;
+  lastItem: boolean;
 }
 
 export const Skill: React.FC<SkillProps> = ({
@@ -24,7 +25,8 @@ export const Skill: React.FC<SkillProps> = ({
   title,
   delay,
   handleClickSkill,
-  modalData
+  modalData,
+  lastItem
 }) => {
   // eslint-disable-next-line
   const [animationState, setAnimationState] = useState({
@@ -42,24 +44,27 @@ export const Skill: React.FC<SkillProps> = ({
   };
 
   return (    
-      <ScrollReveal 
-        origin="top"
-        distance="3rem"
-        delay={delay}
-      > 
-        <Container onClick={() => handleClickSkill(modalData)}>
-          <SymbolContainer>
-            <Symbol
-              width={width < 800 ? '10rem' : '100%'}
-              height={width < 800 ? '100%' : '8rem'}
-              options={defaultOptions}
-              isStopped={animationState.isStopped}
-              isPaused={animationState.isPaused}
-            />
-          </SymbolContainer>
-          <Title>{title}</Title>
-          <MoreText>Saiba Mais<NavigateRightIcon /></MoreText>
-        </Container>
-      </ScrollReveal>
+    <ScrollReveal 
+      origin="top"
+      distance="3rem"
+      delay={delay}
+    > 
+      <Container 
+        lastItem={lastItem} 
+        onClick={() => handleClickSkill(modalData)}
+      >
+        <SymbolContainer>
+          <Symbol
+            width={width < 975 ? '10rem' : '100%'}
+            height={width < 975 ? '100%' : '8rem'}
+            options={defaultOptions}
+            isStopped={animationState.isStopped}
+            isPaused={animationState.isPaused}
+          />
+        </SymbolContainer>
+        <Title>{title}</Title>
+        <MoreText>Saiba Mais<NavigateRightIcon /></MoreText>
+      </Container>
+    </ScrollReveal>
   );
 }

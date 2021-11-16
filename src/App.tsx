@@ -9,6 +9,7 @@ import Modal from 'react-modal';
 import { SkillsModal } from './components/SkillsModal';
 import { data } from './utils/skillsCards';
 import { Projects } from './sections/Projects';
+import { ButtonTop } from './components/ButtonTop';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -16,7 +17,6 @@ function App() {
   const keyTheme = "@davidsonmarra:theme";
 
   Modal.setAppElement('#root');
-
 
   const handleChangeMode = (state: boolean) => {
     localStorage.setItem(keyTheme, String(!state));
@@ -44,6 +44,7 @@ function App() {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
+      <ButtonTop />
       <SkillsModal
         isOpen={isSkillsModalIsOpen} 
         onRequestClose={handleCloseSkillsModal}

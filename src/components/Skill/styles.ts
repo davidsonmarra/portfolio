@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import Lottie from 'react-lottie';
 
-export const Container = styled.div`
+interface ContainerProps {
+  lastItem: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.skillBackground};
   transition: all .5s;
   padding: 2rem 4rem 1rem;
@@ -59,8 +63,8 @@ export const Container = styled.div`
       transform: scaleX(0)
     }
   }
-  @media (max-width: 800px) {
-    margin-bottom: 2rem;
+  @media (max-width: 980px) {
+    margin-bottom: ${({ lastItem }) => !lastItem ? '2rem' : '0'};
   }
 `;
 

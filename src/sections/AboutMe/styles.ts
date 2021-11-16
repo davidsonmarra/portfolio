@@ -13,7 +13,7 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 0 1rem;
   align-items: flex-start;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   @media (max-width: 675px) {
     padding: 0;
     flex-direction: column
@@ -87,5 +87,5 @@ export const Description = styled.p`
 
 export const Qualifications = styled.div`
   width: 100%;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 `;

@@ -15,6 +15,7 @@ import { ResumeIcon } from "./ResumeIcon";
 import { SchoolIcon } from "./SchoolIcon";
 import { TelegramIcon } from "./TelegramIcon";
 import { WorkIcon } from "./WorkIcon";
+import { ArrowUpIcon } from "./ArrowUpIcon";
 
 export {
   AboutIcon,
@@ -33,5 +34,6 @@ export {
   ResumeIcon,
   SchoolIcon,
   TelegramIcon,
-  WorkIcon
+  WorkIcon,
+  ArrowUpIcon
 }

@@ -26,8 +26,7 @@ export const data = [
         "JavaScript",
         "TypeScript",
         "NodeJS",
-        "Métodos de Requisição HTTP",
-        "Códigos de Status de Respostas HTTP"
+        "MySQL"
       ]
     }
   },

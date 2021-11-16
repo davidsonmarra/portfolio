@@ -19,8 +19,8 @@ export const List = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 2rem;
 `;
 
 export const ListItem = styled.li`
