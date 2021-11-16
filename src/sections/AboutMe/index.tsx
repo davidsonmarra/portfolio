@@ -60,26 +60,32 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
           title="Sobre mim"
           subTitle="quem eu sou"
         />
-      <Content>
-          <Image
-            src={uri}
-          />
-          <TextContainer>
-            <TitleContainer>
-              <Title>Eu sou &nbsp;</Title>
-              <TitleDynamic ref={el}></TitleDynamic>
-            </TitleContainer>
-            <DescriptionContainer>
-              <Divider />
-              <Description>
-                Atualmente sou Programador em desenvolvimento Mobile com React Native na Compasso UOL e estou em busca de adquirir experiências e aumentar meus conhecimentos na área. <br/>
-                Estou cursando Engenharia da Computação na PUC Minas e fiz curso técnico integrado de eletrônica no COLTEC.<br/>
-                Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS na web.
-              </Description>
-            </DescriptionContainer>
-            <ResumeButton themeMode={themeMode} />
-          </TextContainer>
-      </Content>
+        <ScrollReveal
+        origin="top"
+        distance="3rem"
+        delay={1000}
+        >
+        <Content>
+            <Image
+              src={uri}
+            />
+            <TextContainer>
+              <TitleContainer>
+                <Title>Eu sou &nbsp;</Title>
+                <TitleDynamic ref={el}></TitleDynamic>
+              </TitleContainer>
+              <DescriptionContainer>
+                <Divider />
+                <Description>
+                  Atualmente sou Programador em desenvolvimento Mobile com React Native na Compasso UOL e estou em busca de adquirir experiências e aumentar meus conhecimentos na área. <br/>
+                  Estou cursando Engenharia da Computação na PUC Minas e fiz curso técnico integrado de eletrônica no COLTEC.<br/>
+                  Meu foco atual é o React Native no ambiente mobile, no qual eu trabalho e o ReactJS na web.
+                </Description>
+              </DescriptionContainer>
+              <ResumeButton themeMode={themeMode} />
+            </TextContainer>
+        </Content>
+      </ScrollReveal>
       </ScrollReveal>
       <ScrollReveal 
         origin="top"
@@ -90,8 +96,14 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
             title="Qualificação"
             subTitle="minha jornada"
           />
-          <TimeLine />
-        </Qualifications>
+          <ScrollReveal
+            origin="top"
+            distance="3rem"
+            delay={1000}
+          >
+            <TimeLine />
+          </ScrollReveal>
+          </Qualifications>
       </ScrollReveal>
     </Container>
   );
