@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+interface GlobalStyleProps {
+  isOpen: boolean;
+}
+
+export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
   * {
     margin: 0;
@@ -12,6 +16,9 @@ export const GlobalStyle = createGlobalStyle`
   // front-size: 16px (Desktop)
   html {
     scroll-behavior: smooth;
+    overflow-y: ${({ isOpen }) => 
+      isOpen ? "hidden" : "auto"
+    };
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
     }
@@ -74,7 +81,7 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: flex-end;
     transition: all .3s;
-    z-index: 2;
+    z-index: 999;
     @media (min-width: 575px) {
       align-items: center;
       transition: all .9s;

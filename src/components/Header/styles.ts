@@ -5,13 +5,13 @@ interface ContainerProps {
 }
 
 export const Container = styled.section<ContainerProps>`
+  z-index: 999;
   position: fixed;
   background: ${({ theme }) => theme.colors.headerBackground};
   transition: all .5s ease-in-out, box-shadow .8s ease-in-out;
   box-shadow: ${({ isTop }) => !isTop ? 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;' : ''};
   width: 100%;
   top: 0;
-  z-index: 2;
 `;
 
 export const Content = styled.div<ContainerProps>`
@@ -23,6 +23,7 @@ export const Content = styled.div<ContainerProps>`
   align-items: center;
   justify-content: space-between;
   color: ${({ theme }) => theme.colors.text};
+  z-index: 999;
 `;
 
 export const Name = styled.h2`

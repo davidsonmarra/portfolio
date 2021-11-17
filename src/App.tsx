@@ -23,7 +23,7 @@ function App() {
     setIsDarkTheme(!state);
   }
 
-  const [isSkillsModalIsOpen, setIsSkillsModalIsOpen] = useState(false);
+  const [isSkillsModalIsOpen, setIsSkillsModalIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const curentTheme = localStorage.getItem(keyTheme);
@@ -43,7 +43,9 @@ function App() {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <GlobalStyle />
+      <GlobalStyle 
+        isOpen={isSkillsModalIsOpen}
+      />
       <ButtonTop />
       <SkillsModal
         isOpen={isSkillsModalIsOpen} 
@@ -51,14 +53,17 @@ function App() {
         modalData={modalData}
         themeMode={isDarkTheme}
       />
-      <Home themeMode={isDarkTheme} changeTheme={handleChangeMode}/>
+      <Home 
+        themeMode={isDarkTheme} 
+        changeTheme={handleChangeMode}
+      />
       <AboutMe themeMode={isDarkTheme} />
       <Skills 
         themeMode={isDarkTheme} 
         openModal={handleOpenSkillsModal}
         setModalData={setModalData}
       />
-      <Projects />
+      <Projects themeMode={isDarkTheme} />
     </ThemeProvider>
   );
 }

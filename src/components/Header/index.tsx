@@ -21,7 +21,10 @@ interface HeaderProps {
   changeTheme: (state: boolean) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ themeMode, changeTheme }) => {
+export const Header: React.FC<HeaderProps> = ({ 
+  themeMode, 
+  changeTheme 
+}) => {
   const { width } = useWindowDimensions();
   const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
   const [isTop, setIsTop] = useState<boolean>(true);

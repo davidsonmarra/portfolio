@@ -7,8 +7,7 @@ interface ContainerProps {
 export const Container = styled.a<ContainerProps>`
   width: 2.5rem;
   height: 2.5rem;
-  background-color: green;
-  z-index: 9;
+  z-index: 2;
   position: fixed;
   bottom: 2rem;
   right: 2rem;

@@ -16,6 +16,7 @@ import { SchoolIcon } from "./SchoolIcon";
 import { TelegramIcon } from "./TelegramIcon";
 import { WorkIcon } from "./WorkIcon";
 import { ArrowUpIcon } from "./ArrowUpIcon";
+import { ArrowDownIcon } from "./ArrowDownIcon";
 
 export {
   AboutIcon,
@@ -35,5 +36,6 @@ export {
   SchoolIcon,
   TelegramIcon,
   WorkIcon,
-  ArrowUpIcon
+  ArrowUpIcon,
+  ArrowDownIcon
 }
