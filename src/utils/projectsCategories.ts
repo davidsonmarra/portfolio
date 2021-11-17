@@ -19,6 +19,12 @@ export const projectsCategories = [
   },
   {
     id: 3,
+    title: "Jogos",
+    selected: false,
+    key: 'category'
+  },
+  {
+    id: 4,
     title: "Outros",
     selected: false,
     key: 'category'

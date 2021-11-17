@@ -4,7 +4,7 @@ interface ContainerProps {
   readonly isTop: boolean;
 }
 
-export const Container = styled.section<ContainerProps>`
+export const Container = styled.header<ContainerProps>`
   z-index: 999;
   position: fixed;
   background: ${({ theme }) => theme.colors.headerBackground};

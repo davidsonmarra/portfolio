@@ -34,7 +34,7 @@ export const ProjectSlide: React.FC<ProjectSlideProps> = ({ data, themeMode }) =
       {
         data.logo ?
           <Logo 
-            width="200rem" 
+            width="125rem" 
             src={data.logo}
             alt="Logo do Projeto"
           /> :

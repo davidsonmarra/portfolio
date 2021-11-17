@@ -20,6 +20,7 @@ export const Container = styled.div`
 
 export const Header = styled.button<HeaderProps>`
   border: none;
+  z-index: 2;
   background-color: ${({ theme, isListOpen }) => 
     !isListOpen ? theme.colors.skillBackground :
     theme.colors.btnTopBackground
@@ -53,13 +54,15 @@ export const HeaderTitle = styled.div<HeaderProps>`
 export const List = styled.div<HeaderProps>`
   width: 15rem;
   display: flex;
+  z-index: 2;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.skillBackground};
   position: absolute;
   bottom: 0;
-  transform: translateY(100%);
+  transform: ${({ isListOpen }) => !isListOpen ? "translateY(80%);" : "translateY(100%)"};
   opacity: ${({ isListOpen }) => !isListOpen ? "0" : "1"};
-  transition: all .8s;
+  visibility: ${({ isListOpen }) => !isListOpen ? "hidden" : "visible"};
+  transition: all .3s;
   border-radius: 0 0 .5rem .5rem;
 `;
 

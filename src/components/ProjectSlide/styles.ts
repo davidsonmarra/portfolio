@@ -33,7 +33,9 @@ export const Banner = styled.img`
   }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  margin-bottom: 1.5rem;
+`;
 
 export const DescriptionContainer = styled.div`
   display: flex;

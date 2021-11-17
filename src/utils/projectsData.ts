@@ -20,7 +20,7 @@ export const dataProjects = [
       "O intuito do projeto é disponibilizar conteúdo sobre programação gratuito para as pessoas interessadas em aprender sobre o assunto.",
     ],
     link: "https://davidsonmarra.github.io/Extensao-IC/",
-    category: ["Front-End"]
+    category: ["Front-End", "Jogos"]
   },
   {
     id: 3,

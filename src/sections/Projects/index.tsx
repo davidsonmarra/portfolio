@@ -52,15 +52,22 @@ export const Projects: React.FC<ProjectsProps> = ({ themeMode }) => {
           title="Projetos"
           subTitle="o que eu fiz"
         />
-        <DropdownCategory 
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          setProjects={setProjects}
-        />
         <ScrollReveal
           origin="top"
           distance="3rem"
           delay={1000}
+          style={{zIndex: 2}}
+        >
+          <DropdownCategory 
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            setProjects={setProjects}
+          />
+        </ScrollReveal>
+        <ScrollReveal
+          origin="top"
+          distance="3rem"
+          delay={1500}
         >
           <Swiper
             spaceBetween={50}

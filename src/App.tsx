@@ -46,24 +46,26 @@ function App() {
       <GlobalStyle 
         isOpen={isSkillsModalIsOpen}
       />
-      <ButtonTop />
-      <SkillsModal
-        isOpen={isSkillsModalIsOpen} 
-        onRequestClose={handleCloseSkillsModal}
-        modalData={modalData}
-        themeMode={isDarkTheme}
-      />
       <Home 
         themeMode={isDarkTheme} 
         changeTheme={handleChangeMode}
       />
-      <AboutMe themeMode={isDarkTheme} />
-      <Skills 
-        themeMode={isDarkTheme} 
-        openModal={handleOpenSkillsModal}
-        setModalData={setModalData}
-      />
-      <Projects themeMode={isDarkTheme} />
+      <main>
+        <ButtonTop />
+        <SkillsModal
+          isOpen={isSkillsModalIsOpen} 
+          onRequestClose={handleCloseSkillsModal}
+          modalData={modalData}
+          themeMode={isDarkTheme}
+        />
+        <AboutMe themeMode={isDarkTheme} />
+        <Skills 
+          themeMode={isDarkTheme} 
+          openModal={handleOpenSkillsModal}
+          setModalData={setModalData}
+        />
+        <Projects themeMode={isDarkTheme} />
+      </main>
     </ThemeProvider>
   );
 }

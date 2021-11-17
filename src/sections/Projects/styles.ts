@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 920px;
   margin: 0 auto;
   padding: 0 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   .slide-container {
     width: 100%;
     border: 2px solid ${({ theme }) => theme.colors.primary};
