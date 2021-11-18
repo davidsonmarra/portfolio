@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Home } from './sections/Home';
-import { AboutMe } from './sections/AboutMe';
 import { GlobalStyle } from './global/styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './global/styles/theme';
-import { ModalDataProps, Skills } from './sections/Skills';
 import Modal from 'react-modal';
-import { SkillsModal } from './components/SkillsModal';
-import { data } from './utils/skillsCards';
-import { Projects } from './sections/Projects';
-import { ButtonTop } from './components/ButtonTop';
+import { Header } from './components/Header';
+import { Sections } from './sections';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const [modalData, setModalData] = useState<ModalDataProps>(data[0].modal);
+  const [isSkillsModalIsOpen, setIsSkillsModalIsOpen] = useState<boolean>(false);
   const keyTheme = "@davidsonmarra:theme";
 
   Modal.setAppElement('#root');
@@ -22,8 +17,6 @@ function App() {
     localStorage.setItem(keyTheme, String(!state));
     setIsDarkTheme(!state);
   }
-
-  const [isSkillsModalIsOpen, setIsSkillsModalIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const curentTheme = localStorage.getItem(keyTheme);
@@ -46,26 +39,17 @@ function App() {
       <GlobalStyle 
         isOpen={isSkillsModalIsOpen}
       />
-      <Home 
+      <Header 
         themeMode={isDarkTheme} 
-        changeTheme={handleChangeMode}
+        changeTheme={handleChangeMode} 
       />
-      <main>
-        <ButtonTop />
-        <SkillsModal
-          isOpen={isSkillsModalIsOpen} 
-          onRequestClose={handleCloseSkillsModal}
-          modalData={modalData}
-          themeMode={isDarkTheme}
-        />
-        <AboutMe themeMode={isDarkTheme} />
-        <Skills 
-          themeMode={isDarkTheme} 
-          openModal={handleOpenSkillsModal}
-          setModalData={setModalData}
-        />
-        <Projects themeMode={isDarkTheme} />
-      </main>
+      <Sections 
+        isSkillsModalIsOpen={isSkillsModalIsOpen}
+        themeMode={isDarkTheme} 
+        changeTheme={handleChangeMode} 
+        closeModal={handleCloseSkillsModal}
+        openModal={handleOpenSkillsModal}
+      />
     </ThemeProvider>
   );
 }

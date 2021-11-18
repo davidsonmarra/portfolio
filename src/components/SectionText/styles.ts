@@ -14,7 +14,7 @@ export const Title = styled.h2<TitleProps>`
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  padding: .5rem 2rem 1rem;
+  padding: .5rem 5rem 1rem;
   font-weight: 500;
   transition: all 0.50s ease-in-out;
   ::before {

@@ -8,6 +8,7 @@ declare module 'styled-components' {
       sidebarBackground: string;
       skillBackground: string;
       btnTopBackground: string;
+      inputBackground: string;
       headerText: string;
       title: string;
       titleSecondary: string;

@@ -13,6 +13,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  background: ${({ theme }) => theme.colors.inputBackground};
 `;
 
 export const BannerContainer = styled.div`

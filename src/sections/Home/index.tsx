@@ -1,5 +1,4 @@
 import React from 'react';
-import { Header } from '../../components/Header';
 import { SocialMediasHome } from '../../components/SocialMediasHome';
 import Tilt from 'react-parallax-tilt';
 import { ScrollReveal } from '../../components/ScrollReveal';
@@ -17,7 +16,6 @@ export const Home: React.FC<HomeProps> = ({ themeMode, changeTheme }) => {
 
   return (
     <Container id="home">
-      <Header themeMode={themeMode} changeTheme={changeTheme} />
       <ScrollReveal
         origin="top"
         distance="3rem"

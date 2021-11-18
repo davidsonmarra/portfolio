@@ -17,6 +17,10 @@ import { TelegramIcon } from "./TelegramIcon";
 import { WorkIcon } from "./WorkIcon";
 import { ArrowUpIcon } from "./ArrowUpIcon";
 import { ArrowDownIcon } from "./ArrowDownIcon";
+import { LocationIcon } from "./LocationIcon";
+import { PhoneIcon } from './PhoneIcon';
+import { EmailIcon } from './EmailIcon';
+import { SendIcon } from './SendIcon';
 
 export {
   AboutIcon,
@@ -37,5 +41,9 @@ export {
   TelegramIcon,
   WorkIcon,
   ArrowUpIcon,
-  ArrowDownIcon
+  ArrowDownIcon,
+  LocationIcon,
+  PhoneIcon,
+  EmailIcon,
+  SendIcon
 }
