@@ -4,19 +4,26 @@ import {
 } from './styles';
 
 interface InputProps {
+  title: string;
   field: string;
-  name: string;
 }
 
 export const Input: React.FC<InputProps> = ({
-  name,
+  title,
   field
 }) => {
   return (
     <Container>
       <div className="form__div">
-        <input type="text" id={field} className="form__input" placeholder=" " />
-        <label htmlFor={field} className="form__label">{name}</label>
+        <input 
+          type={field === "email" ? field : "text"} 
+          name={field}
+          id={field} 
+          className="form__input" 
+          placeholder=" " 
+          required
+        />
+        <label htmlFor={field} className="form__label">{title}</label>
       </div>
     </Container>
   );

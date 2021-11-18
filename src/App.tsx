@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { Header } from './components/Header';
+import { Sections } from './sections';
+import { Footer } from './components/Footer';
 import { GlobalStyle } from './global/styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './global/styles/theme';
 import Modal from 'react-modal';
-import { Header } from './components/Header';
-import { Sections } from './sections';
-import { Footer } from './components/Footer';
+import { ToastContainer } from 'react-toastify';  
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -39,6 +41,19 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle 
         isOpen={isSkillsModalIsOpen}
+      />
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme={isDarkTheme ? "dark" : "light"}
+        style={{marginTop: "5rem"}}
       />
       <Header 
         themeMode={isDarkTheme} 

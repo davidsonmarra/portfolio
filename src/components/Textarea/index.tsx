@@ -4,19 +4,25 @@ import {
 } from './styles';
 
 interface TextareaProps {
+  title: string;
   field: string;
-  name: string;
 }
 
 export const Textarea: React.FC<TextareaProps> = ({
-  field,
-  name
+  title,
+  field
 }) => {
   return (
     <Container>
       <div className="form__div">
-        <textarea id={field} className="form__input" placeholder=" " />
-        <label htmlFor={field} className="form__label">{name}</label>
+        <textarea 
+          id={field} 
+          name={field}
+          className="form__input" 
+          placeholder=" " 
+          required
+        />
+        <label htmlFor={field} className="form__label">{title}</label>
       </div>
     </Container>
   );
