@@ -16,7 +16,7 @@ import { toast } from 'react-toastify' ;
 export const ContactForm: React.FC = () => {
   const { width } = useWindowDimensions();
   const [success, setSuccess] = useState(false);
-  const [state, handleSubmit] = useForm("xdoyqpjq");
+  const [state, handleSubmit, reset] = useForm("xdoyqpjq");
 
   useEffect(() => {
     if(state.succeeded) {
@@ -30,7 +30,9 @@ export const ContactForm: React.FC = () => {
       setSuccess(false);
       const form: any = document.getElementById("contact-form")!;
       form.reset();
+      reset();
     }
+    // eslint-disable-next-line
   }, [success]);
 
   return (
