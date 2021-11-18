@@ -19,6 +19,7 @@ export const InputContainer = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
+  margin-top: 1.4rem;
   display: flex;
   justify-content: flex-end;
   @media(max-width: 770px) {
@@ -37,6 +38,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: .9rem;
   span {
     margin-right: 1rem;
   }

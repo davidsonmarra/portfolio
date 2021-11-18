@@ -8,10 +8,11 @@ import {
   ButtonContainer,
   Button
 } from './styles';
+  
 
 export const ContactForm: React.FC = () => {
   return (
-    <Container>
+    <Container >
       <InputContainer>
         <Input name="Nome" field="name"/>
         <Input name="E-mail" field="email"/>

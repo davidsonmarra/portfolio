@@ -5,6 +5,7 @@ import { lightTheme, darkTheme } from './global/styles/theme';
 import Modal from 'react-modal';
 import { Header } from './components/Header';
 import { Sections } from './sections';
+import { Footer } from './components/Footer';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -50,6 +51,7 @@ function App() {
         closeModal={handleCloseSkillsModal}
         openModal={handleOpenSkillsModal}
       />
+      <Footer />
     </ThemeProvider>
   );
 }

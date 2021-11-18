@@ -45,23 +45,6 @@ export const Container = styled.div`
       transition: all .5s;
       z-index: 1;
     }
-    &__button{
-      display: block;
-      margin-left: auto;
-      padding: .75rem 2rem;
-      outline: none;
-      border: none;
-      background-color: ${({ theme }) => theme.colors.primary};
-      color: #fff;
-      font-size: 1rem;
-      border-radius: .5rem;
-      cursor: pointer;
-      transition: all .5s;
-
-      &:hover{
-        box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
-      }
-    }
   }
 
   /*Input focus move up label*/

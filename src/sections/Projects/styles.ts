@@ -9,6 +9,7 @@ export const Container = styled.div`
     width: 100%;
     border: 2px solid ${({ theme }) => theme.colors.primary};
     border-radius: 1rem;
+    background: ${({ theme }) => theme.colors.inputBackground};
   }
   .slide {
     width: 100%;
