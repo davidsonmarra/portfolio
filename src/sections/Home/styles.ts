@@ -60,6 +60,14 @@ export const CartoonContainer = styled.div<CartoonContainerProps>`
     width: 18rem;
     height: 18rem;
   }
+  @media (max-height: 700px) {
+    width: 20rem;
+    height: 20rem;
+  }
+  @media (max-height: 620px) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 export const Cartoon = styled.img`
@@ -70,6 +78,12 @@ export const Cartoon = styled.img`
   -webkit-user-select: none;
   user-select: none;
   @media (max-width: 675px) {
+    width: 15rem;
+  }
+  @media (max-height: 700px) {
+    width: 17rem;
+  }
+  @media (max-height: 620px) {
     width: 15rem;
   }
 `;
