@@ -24,7 +24,7 @@ export const Home: React.FC<HomeProps> = ({ themeMode, changeTheme }) => {
           <CartoonContainer themeMode={themeMode}>
             <Cartoon 
               className="Tilt-inner" 
-              src="/assets/cartoon.png" 
+              src="/assets/cartoon.svg" 
               alt="Imagem de Davidson Marra em um cartoon"
             />
           </CartoonContainer>
