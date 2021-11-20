@@ -18,8 +18,8 @@ export const ButtonTop: React.FC = () => {
         }
     }
   return (
-    <Container href="#" show={show}>
-      <ArrowUpIcon />
+    <Container href="#" rel="noopener" show={show}>
+      <ArrowUpIcon title="Botão para voltar ao topo"/>
     </Container>
   );
 }

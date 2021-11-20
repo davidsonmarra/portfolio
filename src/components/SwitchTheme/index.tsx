@@ -9,8 +9,15 @@ interface SwitchProps {
 const SwitchTheme: React.FC<SwitchProps> = ({ onClick }) => {
   return (
     <Container >
-      <input className="checkbox" type="checkbox" id="chk" onClick={onClick}/>
-      <label className="label" htmlFor="chk" >
+      <input 
+        id="check" 
+        className="checkbox" 
+        type="checkbox" 
+        onClick={onClick}/>
+      <label 
+        className="label" 
+        htmlFor="check" 
+      >
         <SvgContainer>
           <DarkModeIcon className="left"/>
         </SvgContainer>

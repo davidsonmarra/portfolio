@@ -3,7 +3,7 @@ export const dataProjects = [
     id: 1,
     title: "Uollet",
     logo: "/assets/logo-uollet.svg",
-    banner: "/assets/uollet-banner.png",
+    banner: "/assets/uollet-banner.svg",
     descripton: [
       "Uollet é uma exchange de criptomoedas desenvolvido em React Native.",
       "Foi meu primeiro projeto pessoal nessa tecnologia, e sua proposta é simular uma plataforma de criptomoedas."
@@ -14,7 +14,7 @@ export const dataProjects = [
   {
     id: 2,
     title: "Extensão IC",
-    banner: "/assets/extensao-ic.png",
+    banner: "/assets/extensao-ic.svg",
     descripton: [
       "Este projeto foi desenvolvido por 3 alunos de Engenharia da Computação da PUC Minas, na disciplina de Introdução a Computação.",
       "O intuito do projeto é disponibilizar conteúdo sobre programação gratuito para as pessoas interessadas em aprender sobre o assunto.",
@@ -25,7 +25,7 @@ export const dataProjects = [
   {
     id: 3,
     title: "todo",
-    banner: "/assets/todo-banner.png",
+    banner: "/assets/todo-banner.svg",
     descripton: [
       "Projeto de uma lista de tarefas, pelo qual é possível criar e excluir tarefas, adicionar e remover tags, além de um filtro para mostrar ou não as tarefas que estão marcadas como feitas.",
       "O projeto possui ainda um sistema de categorias, em que cada tarefa pode ser relacionada a uma ou mais categorias.",
@@ -36,7 +36,7 @@ export const dataProjects = [
   {
     id: 4,
     title: "Swap Role",
-    banner: "/assets/swap-role-banner.png",
+    banner: "/assets/swap-role-banner.svg",
     descripton: [
       "Swap role é uma extensão para facilitar a troca de roles na AWS.",
       "Auxilei o Matheus Almeida Costa no desenvolvimento dessa entensão, principalmente na parte do JavaScript."
@@ -47,7 +47,7 @@ export const dataProjects = [
   {
     id: 5,
     title: "Jogo da Velha",
-    banner: "/assets/jogo-da-velha.png",
+    banner: "/assets/jogo-da-velha.svg",
     descripton: [
       "O clássico jogo da velha desenvolvido apenas com HTML, CSS e JS.",
       "Foi o meu primeiro desafio sozinho desenvolvendo jogos na web, e aprendi muito com ele."

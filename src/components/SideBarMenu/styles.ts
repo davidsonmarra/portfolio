@@ -32,7 +32,7 @@ export const Link = styled.a`
   }
 `;
 
-export const SideBarItem = styled.li`
+export const SideBarItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

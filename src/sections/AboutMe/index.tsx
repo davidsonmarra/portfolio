@@ -23,7 +23,7 @@ interface AboutMeProps {
 }
 
 export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
-  const uri = "/assets/me.png";
+  const uri = "/assets/me.svg";
   const el = useRef<any>(null);
 
   useEffect(() => {
@@ -68,6 +68,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ themeMode }) => {
         <Content>
             <Image
               src={uri}
+              alt="Foto de Davidson Marra"
             />
             <TextContainer>
               <TitleContainer>

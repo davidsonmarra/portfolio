@@ -52,6 +52,7 @@ export const ProjectSlide: React.FC<ProjectSlideProps> = ({ data, themeMode }) =
       </TextContainer>
       <ButtonContainer 
         target="_blank"
+        rel="noopener"
         href={data.link}
         themeMode={themeMode}
       >

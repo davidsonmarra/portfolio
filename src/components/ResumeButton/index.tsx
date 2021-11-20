@@ -13,6 +13,7 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({
     <Download 
       href="https://drive.google.com/file/d/1zm_1GKUK8hlZn6aKQS6RMHxFt0LuWeyf/view?usp=sharing"
       target="_blank"
+      rel="noopener"
     >
       <Container themeMode={themeMode}>
         <Content>

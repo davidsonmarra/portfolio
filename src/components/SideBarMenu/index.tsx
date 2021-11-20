@@ -26,33 +26,43 @@ export const SideBarMenu: React.FC<SideBarMenuProps> = ({
   return (
     <Container isSideBarOpen={isSideBarOpen}>
       <SideBarList>
-        <Link href="#about" onClick={() => handleOpenSideBar(isSideBarOpen)}>
-          <SideBarItem>
-            <AboutIcon />
-            Sobre mim
+        <li>
+          <Link href="#about" onClick={() => handleOpenSideBar(isSideBarOpen)}>
+            <SideBarItem>
+              <AboutIcon />
+              Sobre mim
+            </SideBarItem>
+          </Link>
+        </li>
+        <li>
+          <Link href="#skills" onClick={() => handleOpenSideBar(isSideBarOpen)}>
+            <SideBarItem>
+              <HardSkillsIcon />
+              Habilidades
+            </SideBarItem>
+          </Link>
+        </li>
+        <li>
+          <Link href="#projects" onClick={() => handleOpenSideBar(isSideBarOpen)}>
+            <SideBarItem>
+              <ProjectsIcon />
+              Projetos
+            </SideBarItem>
+          </Link>
+        </li>
+        <li>
+          <Link href="#contact" onClick={() => handleOpenSideBar(isSideBarOpen)}>
+            <SideBarItem>
+              <ContactMeIcon />
+              Contato
+            </SideBarItem>
+          </Link>
+        </li>
+        <li>
+          <SideBarItem >
+            <SwitchTheme onClick={() => changeTheme(themeMode)}/>
           </SideBarItem>
-        </Link>
-        <Link href="#skills" onClick={() => handleOpenSideBar(isSideBarOpen)}>
-          <SideBarItem>
-            <HardSkillsIcon />
-            Habilidades
-          </SideBarItem>
-        </Link>
-        <Link href="#projects" onClick={() => handleOpenSideBar(isSideBarOpen)}>
-          <SideBarItem>
-            <ProjectsIcon />
-            Projetos
-          </SideBarItem>
-        </Link>
-        <Link href="#contact" onClick={() => handleOpenSideBar(isSideBarOpen)}>
-          <SideBarItem>
-            <ContactMeIcon />
-            Contato
-          </SideBarItem>
-        </Link>
-        <SideBarItem >
-          <SwitchTheme onClick={() => changeTheme(themeMode)}/>
-        </SideBarItem>
+        </li>
       </SideBarList>
     </Container>
   );
