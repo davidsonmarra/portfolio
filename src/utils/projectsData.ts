@@ -13,6 +13,17 @@ export const dataProjects = [
   },
   {
     id: 2,
+    title: "Ioasys Books",
+    banner: "/assets/books.svg",
+    descripton: [
+      "Este projeto foi desenvolvido em React Native como solução de um desafio técnico!",
+      "Essa é uma aplicação de listagem de livros, onde é possível visualizar diversos livros em uma estrutura de Scroll Infinito."
+    ],
+    link: "https://github.com/davidsonmarra/Books",
+    category: ["Mobile"]
+  },
+  {
+    id: 3,
     title: "Extensão IC",
     banner: "/assets/extensao-ic.svg",
     descripton: [
@@ -23,7 +34,7 @@ export const dataProjects = [
     category: ["Front-End", "Jogos"]
   },
   {
-    id: 3,
+    id: 4,
     title: "todo",
     banner: "/assets/todo-banner.svg",
     descripton: [
@@ -34,7 +45,7 @@ export const dataProjects = [
     category: ["Front-End"]
   },
   {
-    id: 4,
+    id: 5,
     title: "Swap Role",
     banner: "/assets/swap-role-banner.svg",
     descripton: [
@@ -45,7 +56,7 @@ export const dataProjects = [
     category: ["Outros"]
   },
   {
-    id: 5,
+    id: 6,
     title: "Jogo da Velha",
     banner: "/assets/jogo-da-velha.svg",
     descripton: [
